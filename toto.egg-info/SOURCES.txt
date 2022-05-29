@@ -1,3 +1,5 @@
+Makefile
+requirements.txt
 setup.py
 scripts/toto-run
 toto/__init__.py
@@ -6,3 +8,7 @@ toto.egg-info/PKG-INFO
 toto.egg-info/SOURCES.txt
 toto.egg-info/dependency_links.txt
 toto.egg-info/top_level.txt
+toto/__pycache__/__init__.cpython-38.pyc
+toto/__pycache__/__init__.cpython-39.pyc
+toto/__pycache__/lib.cpython-38.pyc
+toto/__pycache__/lib.cpython-39.pyc

@@ -1,9 +1,23 @@
+install_requirements:
+	@pip install -r requirements.txt
+
 install:
+	@pip install .
+
+install_dev:
 	@pip install -e .
 
-clean_terminal:
-	@clear
+uninstall:
+	@pip uninstall -y toto
 
+test:
+	@coverage run -m pytest tests/*.py
+	@coverage report -m --omit=$(VIRTUAL_ENV)/lib/python*
 
-github:
-	@git add . & git commit -m "push" & git push origin master
+clean:
+	@rm -f */version.txt
+	@rm -f .coverage
+	@rm -Rf */__pycache__
+	@rm -Rf */*.pyc
+
+all: install_requirements install test
