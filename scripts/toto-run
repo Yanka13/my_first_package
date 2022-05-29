@@ -1,0 +1,4 @@
+from toto.lib import who_am_i
+from termcolor import colored
+
+print(colored(who_am_i(), "blue"))
